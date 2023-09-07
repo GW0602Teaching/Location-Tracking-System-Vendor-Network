@@ -2,7 +2,7 @@ name: 'Build network'
 on:
   push:
     branches:
-      - 1_github_action_setup
+      - 2_tf_2_var
   pull_request:
 permissions:
   id-token: write
@@ -108,7 +108,7 @@ jobs:
       - name: Terraform Apply
         id: apply
         working-directory: ./terraform
-        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+        if: github.ref == 'refs/heads/2_tf_2_var' && github.event_name == 'push'
         run: terraform apply -auto-approve -input=false
         env:
           TF_VAR_aws_region: ${{ secrets.AWS_REGION }}
