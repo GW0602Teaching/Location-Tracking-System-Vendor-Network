@@ -11,6 +11,7 @@ terraform {
   }
 }
 
+# Indicate the region we used in AWS
 provider "aws" {
   region = "${var.aws_region}"
 }
