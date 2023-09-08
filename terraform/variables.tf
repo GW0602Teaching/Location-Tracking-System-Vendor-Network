@@ -1,6 +1,4 @@
-variable "aws_region" {
-  
-}
+variable "aws_region" {}
 
 variable "app_name" {
   default = "Location-Tracking-System-Vendor-Network"
