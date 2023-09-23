@@ -19,5 +19,3 @@ resource "aws_nat_gateway" "ngw2" {
     Name = "${var.app_name}-ngw2"
   }
 }
-
-// test
